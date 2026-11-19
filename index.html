@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>E-Modul Informatika Kelas X</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#1d2433;--mu:#5d6679;--ac:#2f5bea;--ac2:#e8eeff;--ok:#16794a;--okb:#e3f6ec;--no:#b3261e;--nob:#fdeceb;--bd:#dde1ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f131c;--card:#181e2b;--tx:#e8ecf5;--mu:#9aa5bd;--ac:#7c9bff;--ac2:#222c47;--ok:#5fd39b;--okb:#12301f;--no:#ff8a80;--nob:#3a1a18;--bd:#2b3346}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:860px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px;margin-bottom:16px}
+h1{font-size:1.6rem;margin:0 0 4px}h2{font-size:1.25rem;margin:0 0 8px}h3{font-size:1.05rem;margin:18px 0 6px}
+.mu{color:var(--mu)}label{display:block;font-weight:600;margin:12px 0 4px}
+input,select{width:100%;padding:11px 12px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit}
+button{font:inherit;cursor:pointer;border:0;border-radius:10px;padding:11px 18px;background:var(--ac);color:#fff;font-weight:600}
+button.g{background:var(--ac2);color:var(--ac)}button:disabled{opacity:.45;cursor:not-allowed}
+.hd{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.nav{display:flex;gap:6px;overflow-x:auto;padding:4px 0 10px}
+.nav button{white-space:nowrap;background:var(--card);color:var(--tx);border:1px solid var(--bd);padding:8px 12px;font-weight:500;font-size:.9rem}
+.nav button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.nav button.dn::after{content:" ✓";color:var(--ok)}.nav button.on.dn::after{color:#fff}
+.tabs{display:flex;gap:8px;margin-bottom:14px}.tabs button{flex:1}
+ul{padding-left:20px;margin:6px 0}li{margin:3px 0}
+.box{background:var(--ac2);border-left:4px solid var(--ac);padding:10px 14px;border-radius:8px;margin:10px 0}
+.q{padding:14px 0;border-top:1px solid var(--bd)}.q:first-of-type{border-top:0}
+.o{display:block;width:100%;text-align:left;background:var(--bg);color:var(--tx);border:1px solid var(--bd);margin:6px 0;font-weight:400}
+.o.s{border-color:var(--ac);background:var(--ac2)}.o.c{background:var(--okb);border-color:var(--ok);color:var(--ok)}.o.w{background:var(--nob);border-color:var(--no);color:var(--no)}
+.sc{font-size:2rem;font-weight:800;color:var(--ac)}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:520px}th,td{border:1px solid var(--bd);padding:8px 10px;text-align:center}th{background:var(--ac2)}td:first-child,th:first-child{text-align:left}
+.pill{display:inline-block;padding:2px 10px;border-radius:99px;background:var(--ac2);color:var(--ac);font-size:.85rem;font-weight:600}
+.gm{border-radius:14px;overflow:hidden;background:#15110e;border:1px solid #3a2c22;color:#f4e9dc;margin-top:8px}
+.gh{display:flex;align-items:center;gap:12px;padding:10px 14px;font-weight:700;font-size:.95rem}
+.gp{flex:1;height:10px;border-radius:99px;background:#3a2c22;overflow:hidden}.gp i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffb347,#ffd15c);transition:width .5s}
+#ghr{letter-spacing:2px;white-space:nowrap}
+.gw{position:relative}.gw canvas{display:block;width:100%;height:auto;background:#0a0705}
+.gov{display:flex;flex-direction:column;align-items:center;text-align:center;padding:12px 16px 0}.gov[hidden]{display:none}.gov small{display:block;font-size:.8rem;opacity:.85}.gov h3{font-size:1.15rem}.gov p{margin-bottom:8px}.gov button{padding:8px 22px;font-size:1rem}
+.gov h3,.gfin h3{margin:0 0 6px;font-size:1.4rem;color:#ffd15c}.gov p,.gfin p{margin:0 0 14px;color:#f4e9dc}
+.gov button,.gfin button{background:#ffd15c;color:#2a1a08;padding:12px 26px;font-size:1.05rem;box-shadow:0 4px 0 #b8861f}
+.gqp{padding:14px;min-height:150px}.gqt{font-weight:600;margin-bottom:8px}.gqt.st{color:#bfae9a;font-weight:500;text-align:center;padding:18px 0}
+.gb{display:block;width:100%;text-align:left;margin:7px 0;background:#2a211b;color:#f4e9dc;border:2px solid #4a3a2e;padding:11px 14px;border-radius:12px;font-weight:500}
+.gb:active{transform:scale(.99)}.gb.ok{background:#14532d;border-color:#4ade80}.gb.bad{background:#5b1a18;border-color:#f87171}
+.gfb{font-weight:700;margin-top:6px;min-height:1.4em}
+.gfin{padding:14px;text-align:center;border-top:1px solid #3a2c22}
+@media print{.nav,.tabs,button{display:none}}
+</style>
+</head>
+<body>
+<div class="w" id="app"></div>
+<script>
+// URL Web App Google Apps Script Anda yang sudah dimasukkan:
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyH8wAyET9nVqTQ__qS3OcxTjGm13KNVaFA0RFD8_zleND0OqFvdtYfCdtA21RgZyg4/exec";
+
+const S0=[
+{t:"Informatika di Sekolah Menengah Atas",m:`<h3>1. Informatika</h3><p>Informatika (<i>informatics</i>) adalah disiplin ilmu tentang pengolahan informasi menggunakan komputer. Namanya berasal dari <b>informasi</b> dan <b>matematika</b>, karena matematika dipakai untuk mengolah informasi agar berguna bagi manusia. Informatika mencakup pemodelan komputasi dan penerapannya dalam pengembangan sistem komputer.</p>
+<ul><li><b>Komputasi (bidang matematika)</b>: ilmu untuk menyelesaikan masalah yang melibatkan pengelolaan, pengolahan, dan analisis data secara komputasi.</li>
+<li><b>Komputasi (bidang teknologi komputer)</b>: aktivitas penggunaan dan pengembangan teknologi komputer, perangkat keras, dan perangkat lunak.</li></ul>
+<div class="box">Dasar berpikir informatika adalah <b>berpikir komputasional</b> (<i>computational thinking</i>), dengan empat pilar: <b>dekomposisi, abstraksi, pengenalan pola, algoritma</b>.</div>
+<h3>2. Informatika dan Revolusi Industri 4.0</h3><p>Revolusi industri 4.0 dikenal dengan istilah <i>cyber physical system</i>, yaitu mengolaborasikan <b>teknologi siber</b> dan <b>teknologi otomatisasi</b>. Keterlibatan manusia dalam suatu kegiatan dikurangi dan digantikan teknologi canggih sehingga kerja menjadi lebih efektif dan efisien. Karena hidup di dunia fisik sekaligus dunia siber (maya), masyarakat sekarang dijuluki masyarakat <b>Society 5.0</b>.</p>
+<h3>3. Alasan Belajar Informatika</h3><p>Masyarakat Society 5.0 memanfaatkan mesin cerdas berbasis internet dan komputer. Pekerjaan manusia makin banyak diambil alih mesin, sehingga belajar informatika menjadi langkah awal menghadapi perkembangan zaman, membuka lapangan kerja, dan melatih cara berpikir yang bernalar kritis dan kreatif.</p>
+<h3>4. Bidang Pengetahuan Informatika</h3><p>Ada delapan bidang: berpikir komputasional (BK), teknologi informasi dan komunikasi (TIK), sistem komputer (SK), jaringan komputer dan internet (JKI), analisis data (AD), algoritma dan pemrograman (AP), dampak sosial informatika (DSI), dan praktik lintas bidang (PLB).</p>
+<h3>5. Materi Informatika Kelas X</h3><ul>
+<li><b>BK</b>: strategi penyelesaian persoalan yang tidak intuitif dan naif, agar komputasi lebih efisien dan optimal.</li>
+<li><b>TIK</b>: integrasi antaraplikasi, fitur aplikasi lanjut, dan fitur otomasi.</li>
+<li><b>SK</b>: perangkat keras, komponen komputer, sistem operasi, penyimpanan data dan program di memori, serta pemrosesan instruksi.</li>
+<li><b>AD</b>: pengelolaan dan penyajian data bervolume besar, analisis lebih kompleks, dan otomasi pengambilan data dari internet.</li>
+<li><b>AP</b>: membuat program dengan bahasa pemrograman tekstual dan strategi berpikir komputasional.</li>
+<li><b>DSI</b>: dampak informatika di bidang ekonomi, hukum, keterbukaan informasi, serta karier di bidang informatika.</li>
+<li><b>PLB</b>: bekerja sama secara kolaboratif merancang solusi persoalan sosial yang mengandung perangkat lunak aplikasi.</li></ul>
+<h3>6. Informatika dan Profil Pelajar Pancasila</h3><p>Selain ilmu, kita harus membekali diri dengan karakter luhur. Enam dimensi profil pelajar Pancasila: <b>beriman, bertakwa kepada Tuhan YME, dan berakhlak mulia; berkebinekaan global; bergotong royong; mandiri; bernalar kritis; kreatif</b>. Bergotong royong adalah bentuk kolaborasi untuk mencapai tujuan bersama dan melatih kepedulian pada lingkungan sekitar.</p>`,
+q:[["Informatika berasal dari gabungan kata ....",["informasi dan matematika","internet dan matematika","informasi dan elektronika","komputer dan mesin"],0],
+["Revolusi industri 4.0 mengolaborasikan teknologi ....",["siber dan otomatisasi","mesin uap dan listrik","internet dan televisi","robot dan kabel"],0],
+["Bidang informatika yang mempelajari komponen komputer, memori, dan sistem operasi adalah ....",["Analisis data","Sistem komputer","Dampak sosial informatika","Praktik lintas bidang"],1],
+["Masyarakat yang hidup di dunia fisik dan dunia siber disebut masyarakat ....",["Society 1.0","Society 3.0","Society 5.0","Society 2.0"],2],
+["Berikut bidang pengetahuan informatika, kecuali ....",["Berpikir komputasional","Analisis data","Dampak ekonomi informatika","Algoritma dan pemrograman"],2],
+["Menyelesaikan masalah yang melibatkan pengelolaan, pengolahan, dan analisis data secara komputasi adalah pengertian komputasi di bidang ....",["matematika","elektronika","sains","biologi"],0],
+["Mempelajari bahasa pemrograman termasuk bidang ....",["Sistem komputer","Analisis data","Algoritma dan pemrograman","Dampak sosial informatika"],2],
+["Berikut yang bukan dimensi profil pelajar Pancasila adalah ....",["Bergotong royong","Mandiri","Berkompetisi tanpa batas","Kreatif"],2]]},
+
+{t:"Berpikir Komputasional",m:`<p>Berpikir komputasional adalah cara menyelesaikan persoalan dengan teknik ilmu komputer, secara sistematis, logis, dan dapat diotomatisasi lewat algoritma.</p>
+<h3>Empat pilar</h3><ul>
+<li><b>Dekomposisi</b>: memecah masalah besar menjadi bagian kecil.</li>
+<li><b>Pengenalan pola</b>: menemukan kemiripan atau karakteristik solusi.</li>
+<li><b>Abstraksi</b>: menyaring hal penting, mengabaikan detail yang tidak perlu.</li>
+<li><b>Algoritma</b>: menyusun langkah penyelesaian secara berurutan.</li></ul>
+<div class="box">Urutan dekomposisi: identifikasi masalah utama → daftar komponen utama → daftar bagian kecil → selesaikan hingga detail → susun rencana (algoritma).</div>`,
+q:[["Membagi tugas mencari destinasi, biaya, dan jarak saat merencanakan liburan merupakan penerapan ....",["dekomposisi","abstraksi","pengenalan pola","pengulangan"],0],
+["Menemukan karakteristik solusi terhadap sebuah permasalahan disebut ....",["algoritma","pengenalan pola","dekomposisi","simulasi"],1],
+["Menghilangkan submasalah yang kurang penting setelah dekomposisi merupakan bagian dari ....",["abstraksi","dekomposisi","debugging","kompilasi"],0],
+["Langkah pertama dalam dekomposisi adalah ....",["menyusun algoritma","menyelesaikan detail","mengidentifikasi masalah utama","menguji hasil"],2],
+["Karakteristik berpikir komputasional berikut benar, kecuali ....",["generalisasi solusi untuk berbagai masalah","otomatisasi solusi melalui berpikir algoritma","menyelesaikan masalah tanpa logika","representasi data melalui abstraksi","solusi yang efisien dan efektif"],2],
+["Setelah memeriksa kebenaran algoritma, langkah berikutnya adalah ....",["definisi masalah","analisis algoritma","pengujian program","persiapan dokumentasi","pengembangan model"],1]]},
+
+{t:"Algoritma Pencarian dan Pengurutan",m:`<h3>Binary Search</h3>
+<p>Mencari data pada array yang <b>sudah terurut</b> dengan terus membagi dua daerah pencarian. Nilai tengah: <code>(posisi awal + posisi akhir) / 2</code>. Jika target lebih besar dari nilai tengah, cari di bagian kanan; jika lebih kecil, cari di bagian kiri. Disebut juga half-interval search.</p>
+<h3>Selection Sort</h3>
+<ol><li>Cari bilangan terkecil pada bagian belum terurut.</li><li>Tukar dengan bilangan pertama bagian belum terurut.</li><li>Ulangi sampai bagian belum terurut habis.</li></ol>`,
+q:[["Syarat utama agar binary search dapat digunakan adalah data ....",["berupa teks","sudah terurut","berjumlah genap","bernilai positif"],1],
+["Pada data 1 sampai 10 (indeks 0 sampai 9), indeks tengah awal binary search adalah ....",["3","4","5","9"],1],
+["Selection sort bekerja dengan cara ....",["membagi data menjadi dua","menukar elemen terkecil ke posisi awal bagian belum terurut","mengurutkan dari tengah","menghapus data terkecil"],1],
+["Nama lain dari binary search adalah ....",["half-interval search","bubble search","linear sort","random search"],0],
+["Sequential search mencari x = 37 pada data 33, 43, 20, 47, 15. Indeks yang dikembalikan adalah ....",["0","1","-1","5","2"],2],
+["Pengurutan yang membandingkan dua elemen bersebelahan dan menukarnya jika urutannya salah disebut ....",["selection sort","insertion sort","binary sort","bubble sort","sequential sort"],3],
+["Pengurutan yang menyisipkan elemen ke posisi yang tepat, seperti menyusun kartu, disebut ....",["bubble sort","insertion sort","selection sort","binary search","sequential search"],1],
+["Langkah pertama selection sort adalah mencari ... pada bagian belum terurut.",["bilangan terbesar","bilangan tengah","bilangan terkecil","bilangan ganjil","bilangan genap"],2]]},
+
+{t:"Stack dan Queue",m:`<h3>Tumpukan (Stack)</h3>
+<p>Kaidah <b>LIFO / FILO</b> (Last In First Out): data terakhir masuk keluar pertama, seperti tumpukan piring. Operasi: <b>Push</b> (memasukkan elemen), <b>Pop</b> (menghapus elemen teratas), dan <b>Peek</b> (melihat elemen teratas).</p>
+<h3>Antrean (Queue)</h3>
+<p>Kaidah <b>FIFO</b> (First In First Out). Penambahan di belakang (<i>rear</i>), pengambilan di depan (<i>front</i>). Operasi: <b>Enqueue</b> (memasukkan data), <b>Dequeue</b> (mengeluarkan data), <b>isEmpty</b> dan <b>isFull</b> (memeriksa kosong atau penuh).</p>`,
+q:[["Kaidah yang digunakan stack adalah ....",["FIFO","LIFO","FILO dan FIFO","Round Robin"],1],
+["Operasi untuk memasukkan elemen ke stack adalah ....",["pop","push","enqueue","dequeue"],1],
+["Operasi untuk mengeluarkan data dari antrean adalah ....",["enqueue","push","dequeue","isFull"],2],
+["Contoh penerapan queue dalam kehidupan sehari-hari adalah ....",["tumpukan piring","antrean di loket","tumpukan buku","lipatan baju"],1],
+["Pada implementasi stack dengan linked list, operasi push dapat diganti dengan ....",["addAtFront","insertAtEnd","addAtEnd","listAtFront","listToBack"],0],
+["Fungsi operasi peek pada stack adalah ....",["menghapus elemen teratas","memasukkan elemen baru","melihat data teratas tanpa menghapusnya","memeriksa apakah stack penuh","mengosongkan stack"],2],
+["Fungsi undo pada pengolah teks menerapkan konsep ....",["FIFO","LIFO","Round Robin","binary search","sequential search"],1]]},
+
+{t:"Cek Fakta dan Evaluasi Informasi",m:`<p><b>Fakta</b> adalah hal atau peristiwa yang benar-benar terjadi, bersifat objektif, dan dapat dibuktikan. Opini bersifat subjektif.</p>
+<ul><li>Cek fakta di Indonesia: Kompas.com, Tempo.co, TurnBackHoax.id (Mafindo), dan lainnya; banyak yang tersertifikasi IFCN.</li>
+<li><b>Google Reverse Image</b> dipakai untuk melacak keaslian foto atau gambar.</li>
+<li>Evaluasi informasi digital: objektivitas berarti disajikan tanpa bias pribadi, berdasarkan fakta dan bukti.</li></ul>`,
+q:[["Hal atau peristiwa yang benar-benar terjadi disebut ....",["opini","fakta","hoaks","asumsi"],1],
+["Fasilitas Google untuk melacak keaslian sebuah gambar adalah ....",["Google Maps","Reverse Image","Google Docs","Google Meet"],1],
+["Organisasi di balik TurnBackHoax.id adalah ....",["Mafindo","Kominfo","IFCN","Tempo"],0],
+["Evaluasi informasi yang objektif berarti ....",["memihak pandangan tertentu","berdasarkan fakta tanpa bias pribadi","mengutamakan opini","menyalin berita pertama"],1],
+["Kategori hasil verifikasi Kompas.com adalah ....",["fakta, hoaks, dan sesat","benar, salah, dan ragu","fakta, opini, dan hoaks","valid, invalid, dan netral","fakta, sesat, dan opini"],0],
+["Berikut yang bukan kriteria evaluasi informasi digital adalah ....",["pengarang atau organisasi","ketepatan","kekinian","jumlah pembaca","objektif"],3],
+["Tiga elemen pemeriksaan fakta adalah tema pemberitaan, sumber berita, dan ....",["metode pemeriksaan fakta","jumlah komentar","judul berita","penulis berita","waktu terbit"],0],
+["Informasi yang sengaja dibuat atau disebarkan untuk menyesatkan opini publik disebut ....",["fakta","berita palsu","data primer","opini","evaluasi"],1]]},
+
+{t:"Pengumpulan Data",m:`<p>Data adalah fakta atau bagian fakta yang digambarkan dengan simbol, gambar, nilai, atau uraian yang bermakna pada konteks tertentu.</p>
+<ul><li><b>Kuantitatif</b>: berupa angka dan dapat diukur. <b>Kualitatif</b>: berupa uraian atau kategori.</li>
+<li><b>Primer</b>: diambil langsung dari sumber. <b>Sekunder</b>: dari pihak lain.</li></ul>
+<h3>Metode pengumpulan</h3><ul>
+<li><b>Wawancara</b>: tanya jawab dengan narasumber.</li>
+<li><b>Kuesioner/angket</b>: daftar pertanyaan (terbuka atau tertutup).</li>
+<li><b>Observasi</b>: pengamatan dan pencatatan (partisipan atau non-partisipan).</li>
+<li><b>Dokumentasi</b>: mengumpulkan buku, majalah, dan dokumen tertulis.</li></ul>`,
+q:[["Data berupa angka yang dapat diukur disebut data ....",["kualitatif","kuantitatif","sekunder","deskriptif"],1],
+["Tanya jawab langsung antara peneliti dan narasumber disebut ....",["wawancara","observasi","dokumentasi","angket"],0],
+["Anton mengumpulkan data dari buku, majalah, dan dokumen. Metodenya adalah ....",["observasi","wawancara","dokumentasi","eksperimen"],2],
+["Pada observasi non-partisipan, peneliti ....",["terlibat langsung","tidak terlibat langsung","hanya menyebar angket","mewawancarai"],1],
+["Kuesioner yang pilihan jawabannya sudah disediakan disebut kuesioner ....",["terbuka","tertutup","terstruktur","partisipan","kualitatif"],1],
+["Wawancara yang pertanyaannya sudah dipersiapkan terlebih dahulu disebut wawancara ....",["tidak terstruktur","partisipan","non-partisipan","tertutup","terstruktur"],4],
+["Syarat data yang baik adalah objektif, relevan, sesuai perkembangan, dan ....",["representatif","subjektif","rahasia","panjang","acak"],0],
+["Berat badan dan suhu tubuh termasuk data ....",["kualitatif","nominal","kategorik","kuantitatif","sekunder"],3]]},
+
+{t:"Integrasi Aplikasi Perkantoran",m:`<ul><li><b>Cut, Copy, Paste</b>: data disimpan sementara di <i>clipboard</i>. Cut memindahkan, copy menyalin, paste menempelkan.</li>
+<li><b>Mail Merge</b>: surat massal dari Word dengan sumber data Excel (Mailings → Select Recipients → Use an Existing List → Insert Merge Field → Preview Results → Finish &amp; Merge).</li>
+<li><b>Daftar isi otomatis</b> di Word memakai gaya heading.</li>
+<li><b>Video presentasi</b> di PowerPoint: tab Recording → Record Slide Show.</li></ul>
+<div class="box">Ekstensi file: Word <code>.docx</code>, Excel <code>.xlsx</code>, PowerPoint <code>.pptx</code>.</div>`,
+q:[["Ekstensi file hasil penyimpanan Microsoft Word adalah ....",[".xlsx",".docx",".pptx",".jpeg"],1],
+["Tempat penyimpanan sementara pada perintah cut, copy, paste disebut ....",["clipboard","harddisk","cache","register"],0],
+["Aplikasi berikut yang merupakan pengolah angka (spreadsheet) adalah ....",["Google Docs","Open Office Word","Google Slide","Google Sheet","Microsoft PowerPoint"],3],
+["Pintasan keyboard untuk perintah copy adalah ....",["Ctrl + X","Ctrl + V","Ctrl + P","Ctrl + S","Ctrl + C"],4],
+["Pada OLE, menghubungkan objek sehingga perubahan pada objek asli otomatis tercermin disebut ....",["embedding","linking","clipping","pasting","merging"],1],
+["Objek yang ditanamkan sepenuhnya ke dokumen lain sehingga perubahannya tidak memengaruhi objek asli disebut ....",["linking","copying","exporting","indexing","embedding"],4],
+["Saat memilih Insert Chart di Microsoft Word, aplikasi yang otomatis terbuka adalah ....",["PowerPoint","Outlook","Microsoft Excel","Paint","OneNote"],2]]},
+
+{t:"Sistem Komputer dan Interaksi",m:`<p>Sistem komputer terdiri atas tiga bagian: <b>perangkat keras</b> (hardware), <b>perangkat lunak</b> (software), dan <b>pengguna</b> (brainware).</p>
+<ul><li>Perangkat keras: masukan (input), proses (CPU), keluaran (output), penyimpanan (storage), dan peripheral.</li>
+<li>Perangkat lunak: sistem operasi, aplikasi (pengolah kata, angka, grafis, presentasi), dan pemrograman.</li>
+<li><b>GUI</b>: antarmuka grafis (ikon, menu). <b>CLI</b>: antarmuka perintah teks.</li>
+<li>Perangkat lunak pertama yang berjalan saat komputer menyala adalah <b>sistem operasi</b>.</li></ul>`,
+q:[["Tiga bagian sistem komputer adalah ....",["hardware, software, brainware","CPU, RAM, ROM","input, proses, output","GUI, CLI, OS"],0],
+["Antarmuka yang menggunakan ikon, menu, dan tombol disebut ....",["CLI","GUI","API","BIOS"],1],
+["Perangkat lunak yang pertama berjalan ketika komputer dinyalakan adalah ....",["pengolah kata","sistem operasi","utilitas","aplikasi presentasi"],1],
+["CorelDRAW dan Photoshop termasuk perangkat lunak ....",["presentasi","pengolah grafis","pemrograman","sistem operasi"],1],
+["Komputer yang dirancang untuk dipakai bersamaan dan digunakan bank serta perusahaan telekomunikasi adalah ....",["komputer mini","komputer personal","superkomputer","komputer mainframe","komputer mikro"],3],
+["Scanner dan joystick termasuk perangkat keras ....",["proses","keluaran","penyimpanan","tambahan","masukan"],4],
+["Bahasa pemrograman generasi pertama yang memakai kode biner 0 dan 1 adalah bahasa ....",["Assembly","tingkat tinggi","mesin","Pascal","Java"],2],
+["Manusia yang mahir menjalankan dan mengatur software dan hardware disebut ....",["firmware","brainware","malware","freeware","middleware"],1]]},
+
+{t:"Cara Kerja Komputer dan Mesin Pencari",m:`<ul><li>Komputer bekerja dalam tiga tahap: <b>input → proses → output</b>.</li>
+<li>CPU terdiri dari <b>Control Unit (CU)</b>, <b>ALU</b>, dan <b>register</b>. Siklus: fetch → decode → execute.</li>
+<li><b>Multitasking</b>: menjalankan dua program atau lebih pada saat bersamaan; penjadwalan memakai algoritma <b>Round Robin</b> (tiap proses mendapat jatah waktu).</li>
+<li>Mesin pencari bekerja dalam tiga tahap: <b>information gathering</b> (crawling oleh spider), <b>indexing</b>, dan <b>searching</b>. Mesin pencari awal: Archie dan Veronica.</li></ul>`,
+q:[["Tiga tahap kerja komputer adalah ....",["input, proses, output","start, run, stop","fetch, store, print","baca, tulis, hapus"],0],
+["Komponen CPU yang mengambil dan menerjemahkan instruksi adalah ....",["ALU","Control Unit","Register","Hard disk"],1],
+["Algoritma penjadwalan proses dengan jatah waktu bergilir adalah ....",["Round Robin","Binary Search","Selection Sort","FIFO Search"],0],
+["Tahap mesin pencari yang menyimpan informasi hasil crawling disebut ....",["searching","indexing","browsing","hosting"],1],
+["Pada Round Robin dengan kuantum 100 ms, job yang butuh 250 ms mendapat alokasi CPU ....",["2 kali","3 kali (100, 100, 50 ms)","4 kali","5 kali","1 kali"],1],
+["Memori yang menyimpan data sementara saat program dieksekusi disebut ....",["memori sekunder","memori utama (primer)","harddisk","flash disk","CD-ROM"],1],
+["Bagian CPU yang mengerjakan operasi aritmetika dan logika adalah ....",["CU","BUS","RAM","clock","ALU"],4]]},
+
+{t:"Jaringan Lokal dan Internet",m:`<ul><li><b>LAN</b> (Local Area Network): jaringan lokal di wilayah terbatas, dengan kabel atau nirkabel. Tujuan: berbagi data dan sumber daya.</li>
+<li><b>Internet</b>: jaringan global; terhubung melalui <b>ISP</b> (Internet Service Provider). Tiap perangkat punya <b>alamat IP</b> (contoh benar: 192.168.100.1).</li>
+<li>Koneksi berkabel: <b>dial-up</b> (maks. 56 Kbps), ADSL, fiber optik. Nirkabel: Wi-Fi, satelit.</li></ul>`,
+q:[["Jaringan lokal disebut juga ....",["LAN","WAN","MAN","PAN"],0],
+["Kecepatan maksimum koneksi dial-up adalah ... Kbps.",["26","45","54","56"],3],
+["Contoh penulisan alamat IP yang benar adalah ....",["192.168.100.1","1921.68.10.01","192-168-100-1","1.921.681.001"],0],
+["Perusahaan penyedia layanan akses internet disebut ....",["ISP","DNS","URL","HTML"],0],
+["Kecepatan jaringan lokal (LAN) berkisar antara ....",["2 hingga 100 Mbps","1 hingga 5 Kbps","10 hingga 100 Gbps","56 Kbps saja","1 hingga 10 Tbps"],0],
+["IP address terdiri atas 32 bit yang dibagi menjadi ... bagian.",["dua","tiga","empat","enam","delapan"],2],
+["Protokol standar yang dipakai jaringan internet adalah ....",["TCP/IP","SMTP","Bluetooth","USB","HDMI"],0],
+["Koneksi internet berkabel dengan modem berfrekuensi 34 kHz sampai 1104 kHz adalah ....",["dial-up","ADSL","GPRS","Wi-Fi","satelit"],1]]},
+
+{t:"Komunikasi Data Ponsel dan Proteksi Data",m:`<ul><li>Generasi seluler: GPRS (2G), HSPA (3,5G; 600 Kbps sampai 10 Mbps), <b>LTE/4G</b> (hingga 100 Mbps), <b>5G</b> (hingga 10 Gbps).</li>
+<li><b>Bluetooth</b> memakai gelombang elektromagnetik pada frekuensi <b>2,4 GHz</b>.</li>
+<li><b>HTTPS</b> lebih aman dari HTTP karena enkripsi data dengan lapisan <b>SSL/TLS</b>; tujuannya menjaga kerahasiaan data.</li>
+<li>Proteksi data: jangan sembarangan membagikan data pribadi, gunakan kata sandi kuat, dan waspadai situs tidak aman.</li></ul>`,
+q:[["Teknologi seluler dengan kecepatan hingga 10 Gbps adalah ....",["3G","4G/LTE","HSPA","5G"],3],
+["Bluetooth beroperasi pada frekuensi ....",["900 MHz","2,4 GHz","5 GHz","800 MHz"],1],
+["Keunggulan HTTPS dibanding HTTP adalah ....",["lebih cepat selalu","data dienkripsi dengan SSL/TLS","tanpa alamat IP","tidak perlu internet"],1],
+["Tujuan utama enkripsi data adalah ....",["mempercepat unduhan","menjaga kerahasiaan data","menambah memori","menghemat baterai"],1],
+["Komponen jaringan seluler yang menjadi pemancar dan penerima sinyal ponsel adalah ....",["MSC","HLR","BTS","SMSC","BSC"],2],
+["Jaringan internet ponsel dengan kecepatan 120 sampai 384 Kbps adalah ....",["GPRS","EDGE","3G","HSPA","LTE"],1],
+["Jangkauan maksimum koneksi Wi-Fi pada ponsel sekitar ....",["1 meter","10 meter","100 meter","1 kilometer","10 kilometer"],2],
+["Jaringan 4G/LTE memiliki kecepatan hingga ....",["2 Mbps","10 Mbps","100 Mbps","1 Gbps","10 Gbps"],2]]},
+{t:"Praktik Lintas Bidang",m:`<p>Praktik lintas bidang (PLB) mempelajari cara bekerja sama secara kolaboratif untuk merancang solusi persoalan sosial yang mengandung perangkat lunak aplikasi. Ada <b>tujuh aspek</b> PLB:</p>
+<ol><li>Membina dan menumbuhkan budaya kerja masyarakat digital dalam tim yang inklusif.</li>
+<li>Berkolaborasi untuk melaksanakan tugas dengan tema sistem komputasi.</li>
+<li>Mengenali dan mendefinisikan persoalan yang pemecahannya dapat didukung sistem komputasi.</li>
+<li>Mengembangkan dan menggunakan abstraksi.</li>
+<li>Mengembangkan artefak komputasi, misalnya program sederhana untuk menunjang model komputasi.</li>
+<li>Mengembangkan rencana pengujian, menguji, dan mendokumentasikan hasil uji artefak komputasi.</li>
+<li>Mengomunikasikan proses, fenomena, atau solusi TIK dengan mempresentasikan dan memvisualisasikan, serta memperhatikan hak kekayaan intelektual.</li></ol>`,
+q:[["Bidang yang mempelajari kerja sama kolaboratif untuk merancang solusi persoalan sosial berbasis perangkat lunak aplikasi adalah ....",["Praktik lintas bidang","Sistem komputer","Jaringan komputer","Berpikir komputasional"],0]]},
+{t:"Kolaborasi",m:`<p>Kolaborasi (kerja kelompok) berasal dari <i>co</i> dan <i>labor</i>: penyatuan tenaga untuk mencapai tujuan bersama. Dua orang atau lebih saling memahami permasalahan masing-masing dan saling membantu memecahkannya. Kolaborasi memerlukan pemimpin yang membagi tugas dan peran secara adil.</p>
+<div class="box">Dua prasyarat kolaborasi: <b>tentukan tujuan kolaborasi</b>, dan <b>pastikan persamaan persepsi serta deskripsi lengkap</b> tentang prakondisi masing-masing. Prasyarat umum dilandasi kesadaran dan kerendahan hati untuk saling berbagi.</div>
+<h3>Langkah kolaborasi yang efektif</h3><ol><li>Pahami persoalan dan tujuan bersama.</li><li>Lakukan pembagian peran.</li><li>Kerjakan tugas sesuai peran masing-masing.</li><li>Subtim berkumpul untuk mengintegrasikan hasil kerja.</li><li>Koordinasi antarsubtim diwakili ketua subtim.</li><li>Ketua kelompok memimpin diskusi untuk merumuskan kesimpulan.</li></ol>`,
+q:[["Dua prasyarat kolaborasi adalah ....",["tujuan kolaborasi dan keuntungan kolaborasi","tujuan kolaborasi dan persamaan persepsi serta deskripsi","masalah yang sama dan golongan yang sama","keuntungan dan masalah yang sama"],1],
+["Arman bekerja sama dengan Bayu, ketua kelompok penelitian, agar penelitian lancar. Proses ini disebut ....",["komunikasi","presentasi","kolaborasi","infografis"],2],
+["Setelah anggota mengerjakan bagian sesuai peran, langkah selanjutnya adalah ....",["subtim berkumpul mengintegrasikan hasil kerja","ketua mengerjakan ulang semuanya","kelompok dibubarkan","langsung presentasi tanpa persiapan"],0]]},
+{t:"Komunikasi: Infografis dan Presentasi",m:`<p>Keterampilan komunikasi adalah kemampuan berkomunikasi efektif secara lisan, tertulis, grafik, dan nonverbal untuk memberi informasi dalam pengambilan keputusan. Hasil kerja dapat disampaikan lewat <b>infografis</b> dan <b>presentasi</b>.</p>
+<h3>Infografis</h3><p>Penyajian data atau informasi dalam bentuk visual (tipografi, warna, ilustrasi, ikon) yang jelas, ringkas, mudah dipahami, dan tidak ambigu.</p>
+<ul><li><b>Geografis</b>: data lokasi dalam bentuk peta.</li><li><b>Chart</b>: berbagai jenis grafik.</li><li><b>Statistik</b>: pertumbuhan atau peningkatan dengan rentang waktu tertentu.</li><li><b>Timeline</b>: data berurutan menurut tanggal atau tahun, dengan garis tegas sebagai patokan waktu.</li><li><b>Informasi</b>: penjelasan poin per poin dengan judul deskriptif.</li><li><b>Daftar</b>: tips, trik, dan sejenisnya.</li><li><b>Hierarkis</b>: level tertinggi hingga terendah (piramida).</li><li><b>Perbandingan</b>: persamaan dan perbedaan dua objek atau lebih.</li><li><b>Proses</b>: alur bertahap dengan angka atau SmartArt.</li></ul>
+<p>Fungsi infografis: membuat informasi lebih mudah dipahami, lebih menarik, dan menyederhanakan data yang kompleks.</p>
+<div class="box">Tahapan membuat infografis: (1) tentukan topik, (2) cari data valid, (3) identifikasi target audiens, (4) tentukan pesan utama, (5) rancang desain, (6) publikasikan.</div>
+<h3>Presentasi</h3><p>Berbicara di depan banyak orang untuk menyampaikan gagasan atau materi.</p>
+<ul><li><b>Konten</b>: memuat ringkasan, latar belakang, paparan utama, dan penutup; berupa butir kata kunci.</li>
+<li><b>Tampilan</b>: huruf cukup besar, seimbang antara teks dan gambar, jumlah lembar sesuai waktu.</li>
+<li><b>Persiapan</b>: siapkan bahan dan alat bantu, perhatikan pendengar dan konteks, jelaskan produk dengan alur logis.</li>
+<li><b>Tanya jawab</b>: jawab ringkas dan tegas; jika kurang paham, ulangi pertanyaan untuk klarifikasi.</li></ul>`,
+q:[["Jenis infografis yang menampilkan data dalam bentuk peta adalah ....",["chart","geografis","timeline","hierarki"],1],
+["Peningkatan pemasukan suatu organisasi dari waktu ke waktu cocok ditampilkan dengan infografis ....",["timeline","informasi","statistik","daftar"],2],
+["Garis tegas sebagai patokan waktu dengan ikon penjelasan adalah ciri infografis ....",["proses","timeline","chart","geografis"],1],
+["Tujuan penyampaian informasi lewat infografis adalah agar informasi ... , kecuali ....",["mudah dipahami","lebih menarik","menjadi kompleks","lebih sederhana"],2],
+["Tahap pertama membuat infografis adalah ....",["menentukan topik atau tema","mempublikasikan","merancang desain","mencari data"],0],
+["Andi membuat infografis perkembangan komputer dari generasi ke generasi. Jenis yang tepat adalah ....",["timeline","geografis","perbandingan","daftar"],0],
+["Dari segi tampilan, bahan presentasi yang baik memiliki ....",["huruf cukup besar","teks sebanyak mungkin","jumlah slide tak terbatas","tanpa gambar sama sekali"],0]]},
+{t:"Aplikasi Perkantoran",m:`<p>Aplikasi perkantoran (aplikasi <i>office</i>) adalah kumpulan aplikasi atau perangkat lunak yang digunakan untuk meningkatkan produktivitas. Tiga jenis yang umum digunakan:</p>
+<h3>1. Aplikasi pengolah kata (<i>word processor</i>)</h3><p>Program untuk menyusun, menyunting, dan memformat dokumen serta mencetaknya pada media seperti kertas. Contoh: Microsoft Word, Open Office Word, dan Google Docs. Ekstensi file Word: <code>.docx</code>.</p>
+<h3>2. Aplikasi pengolah angka (<i>spreadsheet</i>)</h3><p>Program untuk mengolah data berupa angka dalam lembar kerja, yaitu tabel dua dimensi yang terdiri atas kolom dan baris. Contoh: Microsoft Excel, Open Office Spreadsheet, Google Sheet, dan Star Office Calc. Ekstensi file Excel: <code>.xlsx</code>.</p>
+<h3>3. Aplikasi presentasi (<i>slide</i>)</h3><p>Program untuk membuat slide presentasi dengan mudah, cepat, dan menarik. Contoh: Microsoft PowerPoint, Open Office Presentation, dan Google Slide. Ekstensi file PowerPoint: <code>.pptx</code>.</p>
+<div class="box">Banyak pekerjaan kini mensyaratkan kemampuan memakai aplikasi perkantoran untuk membuat laporan dan jadwal kerja secara digital.</div>`,
+q:[["Aplikasi untuk menyusun, menyunting, memformat, dan mencetak dokumen teks disebut ....",["spreadsheet","pengolah kata","presentasi","basis data","pengolah grafis"],1],
+["Lembar kerja berupa tabel dua dimensi (kolom dan baris) merupakan fitur utama aplikasi ....",["pengolah kata","presentasi","pengolah angka","pemutar media","peramban web"],2],
+["Berikut yang merupakan contoh aplikasi presentasi adalah ....",["Google Sheet","Google Slide","Google Docs","Star Office Calc","WPS Writer"],1],
+["Ekstensi file hasil penyimpanan Microsoft Excel adalah ....",[".docx",".pptx",".txt",".xlsx",".jpeg"],3]]},
+{t:"Fitur Lanjut Aplikasi Perkantoran",m:`<h3>1. Mail Merge (Word dan Excel)</h3><p>Fasilitas untuk surat menyurat massal, misalnya surat undangan, tagihan, promosi, sertifikat, label, dan amplop yang dikirim ke banyak penerima. Dua hal penting: <b>dokumen inti</b> (format dasar surat) dan <b>sumber data</b> (nama, alamat, dan sebagainya yang digabungkan).</p>
+<p>Langkah contoh (invoice pesanan martabak lewat e-mail):</p>
+<ol><li>Di Excel, buat tabel nama pemesan, jenis martabak, harga, dan alamat e-mail, lalu simpan (misalnya bernama Mail Merge).</li>
+<li>Di Word buat dokumen baru: <b>Mailings &gt; Start Mail Merge &gt; E-mail Messages</b> (atau Letters jika tidak dikirim lewat e-mail).</li>
+<li><b>Select Recipients &gt; Use an Existing List</b>, pilih file Excel tadi, klik OK.</li>
+<li>Ketik isi surat; untuk variabel pilih <b>Insert Merge Field</b> &gt; Nama, Martabak, atau Harga.</li>
+<li>Klik <b>Preview Results</b> untuk melihat hasil.</li>
+<li>Simpan: <b>Finish &amp; Merge &gt; Print Documents &gt; Microsoft Print to PDF</b>. Kirim e-mail: <b>Finish &amp; Merge &gt; Send Email Messages</b>, tulis subject, lalu OK (terbuka Outlook).</li></ol>
+<h3>2. Daftar isi otomatis di Microsoft Word</h3><p>Daftar isi memberi gambaran struktur dan isi buku. Langkahnya: (1) beri style <b>Heading 1, Heading 2, Heading 3</b>, dan seterusnya pada judul dan subjudul, (2) klik bagian yang akan menjadi halaman daftar isi, (3) buka tab <b>References</b>, (4) klik <b>Table of Contents</b> dan pilih modelnya. Nomor halaman terisi otomatis.</p>
+<h3>3. Video presentasi di Microsoft PowerPoint</h3><p>Fitur rekam layar tersedia umum sejak seri 2013 untuk membuat presentasi bernarasi dan berpotongan video narator.</p>
+<ol><li>Buat presentasi; tampilkan tab Recording: <b>File &gt; Options &gt; Customize Ribbon &gt; centang Recording</b>.</li>
+<li>Klik <b>Record Slide Show</b>; kamera webcam dapat diaktifkan, dan tersedia pen serta highlighter.</li>
+<li>Klik <b>Record</b> (ada hitung mundur), lalu berbicara; pindah slide dengan panah keyboard atau layar.</li>
+<li><b>Pause</b> untuk jeda, <b>Stop</b> untuk berhenti. Salah narasi: <b>Clear Recording on Current Slide</b>; hapus semua: <b>Clear Recording on All Slides</b> (permanen).</li>
+<li>Selesai: tekan <b>Esc</b>. Ekspor video: <b>Export to Video</b> (MP4) &gt; pilih kualitas &gt; <b>Create a Video</b>.</li></ol>`,
+q:[["Dua hal penting dalam Mail Merge adalah dokumen inti dan ....",["sumber data","kata sandi","gambar","tabel pivot","makro"],0],
+["Fitur daftar isi otomatis di Microsoft Word terdapat pada tab ....",["Home","Insert","References","Review","View"],2],
+["Agar daftar isi otomatis dapat dibuat, judul dan subjudul harus diberi ....",["border","style Heading","watermark","hyperlink","kolom"],1],
+["Agar presentasi PowerPoint menjadi file video MP4, dipilih ....",["Save as Word","Print Preview","Insert Chart","Export to Video","Spell Check"],3],
+["Tab yang digunakan untuk merekam slide show di PowerPoint adalah ....",["Design","Recording","Transitions","Animations","Review"],1]]},
+{t:"Mesin Pencari",m:`<p>Browser dapat dipakai mencari informasi karena memiliki <b>mesin pencari</b> (<i>search engine</i>) yang mengumpulkan informasi sesuai keinginan kita.</p>
+<h3>Sejarah singkat</h3><ul><li><b>1990</b>: Tim Berners-Lee menciptakan World Wide Web (WWW), awal berkembangnya mesin pencari. Seiring bertambahnya halaman web, muncul upaya menyederhanakan pencarian.</li>
+<li><b>Archie</b>: membuat indeks nama file dan lokasinya di server FTP; pengguna mencari dengan perintah sederhana.</li>
+<li><b>Veronica</b> (1992, Universitas McGill): memperluas Archie, dapat mencari dan mengindeks <i>isi</i> file teks, sedangkan Archie hanya mencari file.</li>
+<li><b>Wanderer</b> (1993, Matthew Gray, MIT): salah satu bot atau <i>crawler</i> paling awal; menjelajahi web otomatis lewat tautan, menyalin dan mengindeks halaman.</li>
+<li><b>Spider</b> (web crawler): komponen penting mesin pencari modern; mulai dari daftar URL yang dikenal, menemukan URL baru lewat tautan, dan terus memperbarui indeks.</li></ul>
+<h3>Tiga tahap cara kerja</h3><ol><li><b>Information gathering</b>: spider mengunjungi dan merayapi situs, mengumpulkan teks, gambar, tautan, dan struktur halaman.</li>
+<li><b>Indexing</b>: informasi disimpan dalam database besar beserta metadata (judul, deskripsi, tautan, struktur) agar cepat diambil.</li>
+<li><b>Searching</b>: kueri pengguna (kata kunci, frasa, pertanyaan) dicocokkan dengan indeks memakai algoritma yang mempertimbangkan frekuensi dan posisi kata kunci, kualitas konten, dan popularitas tautan. Hasil ditampilkan sebagai tautan beserta cuplikan (<i>snippet</i>).</li></ol>
+<h3>Macam-macam mesin pencari</h3><ul><li><b>Google</b> dan <b>Yahoo!</b> (salah satu yang tertua).</li><li><b>Bing</b>: dikembangkan Microsoft.</li><li><b>DuckDuckGo</b>: menjaga privasi; pengguna tidak perlu akun pribadi dan tidak dikumpulkan alamat IP-nya.</li></ul>`,
+q:[["Pencipta World Wide Web pada tahun 1990 adalah ....",["Matthew Gray","Alan Emtage","Tim Berners-Lee","Peter Deutsch","Roger Cray"],2],
+["Urutan tiga tahap kerja mesin pencari adalah ....",["searching, indexing, information gathering","information gathering, indexing, searching","indexing, searching, information gathering","searching, information gathering, indexing","indexing, information gathering, searching"],1],
+["Mesin pencari yang menjaga privasi dan tidak mewajibkan akun pribadi adalah ....",["Google","Bing","Yahoo!","DuckDuckGo","Archie"],3],
+["Program otomatis yang menjelajahi web dengan mengikuti tautan antarhalaman disebut ....",["driver","web crawler (spider)","browser","kompiler","router"],1]]},
+{t:"Kolaborasi dalam Sistem Komputer dan Sistem Operasi",m:`<h3>Tiga bentuk interaksi</h3><ul><li><b>Software dengan software</b>: komunikasi atau kerja sama antarprogram. Contoh: laptop baru perlu dipasang sistem operasi sebelum dapat memakai aplikasi pengolah kata.</li>
+<li><b>Hardware dengan hardware</b>: perangkat keras bekerja bersama, misalnya input (mouse, keyboard), proses, lalu output (monitor). Tetap butuh perangkat lunak sebagai perantara.</li>
+<li><b>Software dengan hardware</b>: perangkat lunak harus dapat mengenali atau dikenali perangkat keras. Contoh: memasang <b>driver</b> agar komputer mengenali printer. Driver adalah komponen system software sebagai perantara komunikasi antara sistem operasi dan hardware.</li></ul>
+<h3>Sistem operasi</h3><p>Berperan sebagai <b>resource manager</b> (mengelola seluruh sumber daya sistem komputer) dan <b>extended machine</b> (menyediakan layanan agar komputer mudah dan nyaman dipakai). Saat komputer dihidupkan, CPU belum berisi program; proses menyalakan komputer dan memulai sistem operasi disebut <b>booting</b>.</p>
+<h3>Fungsi dan peran sistem operasi</h3><ol><li>Menyediakan antarmuka bagi pengguna.</li><li>Mengendalikan input dan output.</li><li>Mengelola perangkat keras dan periferal.</li><li>Mengelola pemuatan dan eksekusi perangkat lunak.</li><li>Mengelola sistem pengarsipan file dan folder (copy, save, sort, delete, cut).</li><li>Menangani interupsi dan kesalahan (error).</li><li>Mengelola prosesor atau CPU.</li></ol>`,
+q:[["Sebelum memakai printer, komputer biasanya memerlukan program ... agar mengenali printer.",["firewall","driver","antivirus","browser","kompresor"],1],
+["Proses menyalakan komputer dan memulai sistem operasi disebut ....",["booting","crawling","indexing","streaming","rendering"],0],
+["Sistem operasi sebagai resource manager berarti sistem operasi ....",["menampilkan gambar saja","menyimpan data permanen saja","mengelola seluruh sumber daya sistem komputer","menjalankan satu program saja","mengganti perangkat keras"],2],
+["Interaksi mouse dan keyboard dengan monitor merupakan contoh interaksi ....",["software dengan software","hardware dengan hardware","software dengan hardware","jaringan dengan internet","manusia dengan manusia"],1]]},
+{t:"Proteksi Data saat Berinternet",m:`<p>Saat berinternet perlu kesadaran untuk tidak sembarangan memasukkan identitas pribadi karena banyak kejahatan di dunia maya. Cara melindungi data:</p>
+<ol><li><b>Pastikan data terenkripsi.</b> Enkripsi mengubah data (<i>plaintext</i>) menjadi format yang sulit dimengerti (<i>ciphertext</i>), sehingga hanya pemilik kunci rahasia yang dapat mengembalikannya. Tujuannya melindungi kerahasiaan dan integritas data dari akses tidak sah. Situs HTTPS lebih aman daripada HTTP karena memakai enkripsi lapisan SSL/TLS.</li>
+<li><b>Hati-hati menggunakan Wi-Fi.</b> Wi-Fi dapat disalahgunakan, misalnya lewat access point palsu yang mencuri username dan password.</li>
+<li><b>Waspadai tautan phishing.</b> Tautan dapat mengarah ke halaman login palsu. Periksa domain situs; situs pemerintah memakai domain .go.id.</li>
+<li><b>Gunakan password sulit ditebak</b> (kombinasi karakter) dan ganti setiap tiga bulan.</li>
+<li><b>Gunakan mode incognito.</b> Browser tidak merekam data login, cache, dan cookies dari situs yang dikunjungi.</li></ol>`,
+q:[["Data hasil enkripsi yang sulit dimengerti disebut ....",["plaintext","ciphertext","metadata","hypertext","cookies"],1],
+["Tautan yang mengarah ke halaman login palsu untuk mencuri data disebut ....",["phishing","booting","streaming","indexing","tethering"],0],
+["Mode browser yang tidak merekam data login, cache, dan cookies adalah ....",["safe mode","debug","incognito","offline","kiosk"],2],
+["Domain situs pemerintah di Indonesia adalah ....",[".com",".go.id",".co.id",".org",".sch.id"],1],
+["Kata sandi yang baik adalah ....",["tanggal lahir","nama sendiri","123456","kombinasi karakter yang sulit ditebak","sama untuk semua akun"],3]]}
+];
+S0[1].t="Mengenal Berpikir Komputasional";
+S0[1].m=`<p>Berpikir komputasional adalah metode menyelesaikan persoalan dengan menerapkan teknik ilmu komputer (informatika): memecahkan masalah secara sistematis dan logis, serta mengotomatisasi solusi melalui cara berpikir algoritma. Prosesnya dapat dieksekusi oleh manusia maupun mesin. Keterampilan ini juga dibutuhkan dalam kehidupan sehari-hari, misalnya perencanaan dan pengambilan keputusan.</p>
+<h3>Karakteristik</h3><ul><li>Mampu melakukan generalisasi solusi untuk berbagai masalah berbeda.</li><li>Mampu melakukan otomatisasi solusi melalui cara berpikir algoritma.</li><li>Mampu memberi pemecahan masalah dengan komputer atau perangkat lain.</li><li>Mampu mengidentifikasi, menganalisis, dan mengimplementasikan solusi secara efisien dan efektif.</li><li>Memiliki logika dalam mengelompokkan dan menganalisis data.</li><li>Mampu merepresentasikan data melalui abstraksi dengan model atau simulasi.</li></ul>
+<h3>Empat fondasi berpikir komputasional</h3>
+<p><b>1. Dekomposisi</b>: memecah masalah kompleks menjadi bagian-bagian lebih kecil dan mudah dipecahkan. Langkahnya: (1) identifikasi masalah utama, (2) susun daftar komponen utama, (3) susun daftar bagian-bagian kecilnya, (4) buat rencana penyelesaian sesuai urutan (algoritma), (5) selesaikan setiap bagian kecil hingga detail.</p>
+<p><b>2. Pengenalan pola</b>: menemukan karakteristik solusi terhadap suatu permasalahan. Caranya: melihat pola secara menyeluruh, memikirkan pola dengan matang, dan merasakan pola.</p>
+<p><b>3. Abstraksi</b>: metode cepat memecahkan masalah baru berdasarkan pengalaman pada masalah sejenis. Langkahnya: kumpulkan submasalah hasil dekomposisi, tentukan skala kebutuhan tiap submasalah terhadap masalah kompleks, lalu hilangkan submasalah yang kurang penting.</p>
+<p><b>4. Algoritma</b>: tahapan mengambil penyelesaian masalah sesuai fakta yang ada. Sembilan langkah pemikiran algoritmik:</p>
+<div class="box">(1) Definisi masalah, (2) pengembangan model, (3) spesifikasi algoritma, (4) merancang algoritma, (5) memeriksa kebenaran algoritma, (6) analisis algoritma, (7) implementasi algoritma, (8) pengujian program, (9) persiapan dokumentasi.</div>`;
+S0[2].t="Pencarian dan Pengurutan";
+S0[2].m=`<h3>Pencarian (Searching)</h3><p>Proses menemukan data tertentu dalam kumpulan data bertipe sama. Dua metode: sequential search dan binary search.</p>
+<p><b>Sequential search</b>: membandingkan data yang dicari dengan elemen satu per satu dari awal sampai akhir. Tidak perlu data terurut. Jika ditemukan, dikembalikan indeksnya; jika tidak, dikembalikan -1.</p>
+<div class="box">Contoh: x = 33 pada 17, 35, 33, 76 ditemukan, IDX = 2. Contoh: x = 37 pada 33, 43, 20, 47, 15 tidak ditemukan, IDX = -1.</div>
+<p><b>Binary search</b>: pencarian dimulai dari data tengah pada data yang <b>sudah terurut</b>. Jika data dicari lebih kecil dari nilai tengah, cari di separuh pertama; jika lebih besar, cari di separuh kedua. Disebut juga half-interval search, logarithmic search, atau binary chop.</p>
+<div class="box">Mencari 7 pada 1 sampai 10: r = (0 + 9) / 2 = 4, data ke-4 adalah 5. Karena 7 lebih besar, daftar menjadi 6, 7, 8, 9, 10. Nilai tengahnya 8; 7 lebih kecil, daftar menjadi 6, 7. Nilai tengah 7 sama dengan yang dicari: ditemukan.</div>
+<h3>Pengurutan (Sorting)</h3><p>Menyusun kembali data menurut aturan tertentu: menaik (<i>ascending</i>, L[1] ≤ L[2] ≤ ... ≤ L[N]) atau menurun (<i>descending</i>). Data berbentuk record diurutkan berdasarkan <i>field kunci</i>.</p>
+<p><b>Bubble sort</b>: membandingkan dua elemen bersebelahan dan menukarnya jika urutannya salah, diulang sampai terurut.</p>
+<div class="box"><code>Semua: 80 45 19 55 32 23<br>It-1: 19 80 45 23 55 32<br>It-2: 19 23 80 45 32 55<br>It-3: 19 23 32 80 45 55<br>It-4: 19 23 32 45 80 55<br>It-5: 19 23 32 45 55 80</code></div>
+<p><b>Selection sort</b>: (1) cari bilangan terkecil di bagian belum terurut, (2) tukar dengan bilangan pertama bagian belum terurut, (3) ulangi sampai habis.</p>
+<div class="box"><code>Semua: 45 54 15 83 13 76<br>It-1: 13 54 15 83 45 76<br>It-2: 13 15 54 83 45 76<br>It-3: 13 15 45 83 54 76<br>It-4: 13 15 45 54 83 76<br>It-5: 13 15 45 54 76 83</code></div>
+<p><b>Insertion sort</b>: menyisipkan setiap elemen ke posisi yang tepat pada bagian yang sudah terurut, seperti menyusun kartu di tangan.</p>
+<div class="box"><code>Semua: 14 11 37 52 33 45<br>It-2: 11 14 37 52 33 45<br>It-5: 11 14 33 37 52 45<br>It-6: 11 14 33 37 45 52</code></div>`;
+S0[3].t="Tumpukan (Stack) dan Antrean (Queue)";
+S0[3].m=`<p>Stack dan queue adalah struktur data yang menentukan cara data disimpan dan diproses.</p>
+<h3>Tumpukan (Stack)</h3><p>Data hanya dapat diambil atau ditambah dari bagian atas, seperti tumpukan barang dalam tempat yang hanya punya satu pintu. Kaidahnya <b>LIFO</b> atau FILO (Last In First Out): data terakhir masuk keluar pertama.</p>
+<ul><li><b>Push</b>: memasukkan elemen ke bagian atas.</li><li><b>Pop</b>: menghapus elemen teratas.</li><li><b>IsFull / IsEmpty</b>: memeriksa tumpukan penuh atau kosong.</li><li><b>Peek</b> (mengintip): melihat data teratas tanpa menghapusnya.</li></ul>
+<p>Stack dapat diimplementasikan dengan <b>array</b> (akses berdasarkan indeks) atau <b>linked list</b> (push menjadi <i>addAtFront</i>, pop menghapus node depan).</p>
+<p>Contoh: tumpukan buku di rak, tumpukan piring di dapur, dan fungsi <i>undo</i> pada pengolah teks.</p>
+<h3>Antrean (Queue)</h3><p>Elemen ditambahkan di belakang (<i>rear</i>) dan diambil dari depan (<i>front</i>). Kaidahnya <b>FIFO</b> (First In First Out).</p>
+<ul><li><b>Enqueue</b>: memasukkan data ke antrean.</li><li><b>Dequeue</b>: mengeluarkan data dari antrean.</li><li><b>IsFull / IsEmpty</b>: memeriksa antrean penuh atau kosong.</li><li><b>Clear</b>: menghapus seluruh antrean.</li></ul>
+<p>Contoh: antrean di tempat pembayaran supermarket, dan penumpang di halte bus atau terminal.</p>`;
+S0[4].t="Ekosistem Periksa Fakta dan Evaluasi Informasi";
+S0[4].m=`<h3>Fakta</h3><p>Fakta (dari kata Latin <i>factus</i>) adalah hal atau peristiwa yang benar-benar terjadi dan dapat dibuktikan kebenarannya secara empiris. Ciri-cirinya: (1) <b>ada data akurat</b> seperti angka, tanggal, atau pernyataan yang dapat diverifikasi, (2) <b>bersifat objektif</b> (netral, tidak memihak), dan (3) <b>telah benar-benar terjadi</b> serta dapat disaksikan banyak orang. Di era digital, fakta harus didukung data akurat yang dapat diverifikasi.</p>
+<h3>Berita palsu (hoaks)</h3><p>Informasi yang sengaja dibuat atau disebarkan untuk menyesatkan atau memanipulasi opini publik. Cepat menyebar di media sosial, kurang akurat, tidak didukung sumber yang dapat diverifikasi, dan sering berjudul menarik serta kontroversial.</p>
+<h3>Organisasi cek fakta di Indonesia</h3><p>Bekerja dengan mekanisme <i>crowdsourcing</i>. Enam organisasi tersertifikasi IFCN: Liputan6.com, Suara.com, Tirto.id, Kompas.com, Tempo.co, dan TurnBackHoax.id (Mafindo).</p>
+<ul><li><b>Kompas.com</b> menyimpulkan tiga kategori: <b>fakta</b>, <b>hoaks</b>, dan <b>sesat</b> (mengandung kebenaran tetapi disebarkan sehingga menyesatkan).</li><li><b>Tirto.id</b> memakai pemeriksaan fakta (live fact-check) dan pemeriksaan data.</li><li><b>TurnBackHoax.id</b> dikelola Mafindo, dengan laporan dari jaringan relawan.</li></ul>
+<h3>Elemen pemeriksaan fakta</h3><p><b>Tema pemberitaan</b> (topik berita), <b>sumber berita</b> (cari konfirmasi dari beberapa sumber), dan <b>metode pemeriksaan</b>: verifikasi sumber, pengecekan dengan sumber terpercaya, analisis data dan informasi, serta konfirmasi dan cross-checking.</p>
+<h3>Validasi sumber data: Google Reverse Image</h3><ol><li>Buka Google Images.</li><li>Unggah foto atau masukkan URL gambar.</li><li>Lihat hasil gambar yang cocok atau mirip.</li><li>Kunjungi halaman terkait untuk memeriksa konteks.</li><li>Lakukan analisis tambahan: periksa metadata dan tanda manipulasi.</li></ol>
+<h3>Evaluasi informasi digital</h3><p>Empat kriteria: <b>pengarang atau organisasi</b> (kredibilitas), <b>ketepatan</b> (sesuai fakta), <b>kekinian</b> (informasi terbaru), dan <b>objektif</b> (netral, berdasarkan fakta dan bukti tanpa bias pribadi).</p>`;
+S0[5].m=`<h3>Data</h3><p>Data (bentuk jamak dari <i>datum</i>, bahasa Latin: sesuatu yang diberikan) adalah fakta atau bagian fakta yang digambarkan dengan simbol, gambar, nilai, atau uraian yang bermakna pada konteks tertentu. Data yang baik memenuhi syarat <b>objektif, relevan, sesuai perkembangan (up to date), dan representatif</b>.</p>
+<ul><li><b>Data kuantitatif</b>: berbentuk angka atau jumlah, dapat diukur, dan objektif; contoh harga benda, berat badan, suhu tubuh, tinggi badan.</li><li><b>Data kualitatif</b>: berhubungan dengan kategori atau karakteristik (bukan angka) yang tidak dapat diukur; contoh bahasa, pekerjaan, jenis kelamin, sikap.</li></ul>
+<h3>Metode pengumpulan data</h3><p>Teknik atau cara mengumpulkan data. <b>Instrumen</b> adalah alat bantu agar pengumpulan data lebih mudah dan sistematis.</p>
+<ul><li><b>Angket (kuesioner)</b>: pertanyaan tertulis untuk responden. <i>Terbuka</i>: responden bebas menjawab. <i>Tertutup</i>: pilihan jawaban sudah disediakan.</li>
+<li><b>Wawancara</b>: tanya jawab dengan narasumber. <i>Terstruktur</i>: pertanyaan sudah disiapkan, boleh memakai alat bantu (kamera, perekam suara, alat tulis). <i>Tidak terstruktur</i>: pertanyaan tidak disiapkan lebih dahulu.</li>
+<li><b>Observasi</b>: pengamatan dan pencatatan fakta untuk mendapat informasi akurat dan faktual. <i>Participant observation</i>: peneliti terlibat langsung. <i>Non participant observation</i>: tidak terlibat langsung.</li>
+<li><b>Dokumentasi</b>: menyelidiki benda tertulis seperti buku, majalah, dokumen, dan notulen rapat.</li></ul>`;
+S0[6].t="Integrasi Konten Aplikasi Perkantoran";
+S0[6].m=`<p>Integrasi software adalah proses menggabungkan atau menghubungkan beberapa perangkat lunak menjadi satu kesatuan yang berfungsi terpadu, untuk meningkatkan efisiensi operasional, mengoptimalkan kinerja sistem, atau memungkinkan berbagi data antaraplikasi. Contoh: Microsoft Office, tempat Word dan Excel sudah terintegrasi.</p>
+<h3>a. Perintah Cut, Copy, dan Paste</h3><p>Terinspirasi dari praktik mengedit naskah ketik dengan gunting dan menempelkan potongan ke halaman lain (masih berlangsung hingga 1980-an). Di komputer, data disimpan sementara di <b>clipboard</b>:</p>
+<ul><li><b>Cut</b> (potong, Ctrl + X): memindahkan objek ke clipboard.</li><li><b>Copy</b> (salin, Ctrl + C): menyalin objek ke clipboard.</li><li><b>Paste</b> (tempel, Ctrl + V): menempatkan objek dari clipboard ke dokumen tujuan.</li></ul>
+<h3>b. Fitur integrasi konten</h3><p>Memilih satu menu di sebuah aplikasi dapat otomatis membuka aplikasi lain. Contoh: menu <b>Insert Chart</b> di Word membuka Microsoft Excel.</p>
+<h3>c. Object Linking and Embedding (OLE)</h3><p>Teknologi Microsoft yang memungkinkan objek satu aplikasi di-link atau di-embed ke aplikasi lain tanpa salinan fisik.</p>
+<ul><li><b>Linking (penautan)</b>: objek dihubungkan tanpa ditanam; perubahan pada objek asli otomatis tercermin di semua tempat tautan.</li><li><b>Embedding (pencantuman)</b>: objek ditanam sepenuhnya menjadi bagian dokumen; perubahan tidak memengaruhi objek di tempat lain.</li></ul>
+<div class="box">Contoh OLE: menyisipkan lembar kerja Excel ke dokumen Word dan memperbarui datanya tanpa keluar dari Word.</div>`;
+S0[7].t="Komputer, Komponen, dan Interaksi Manusia dan Komputer";
+S0[7].m=`<p>Sistem komputer adalah perangkat-perangkat komputer yang saling berinteraksi untuk melakukan tugas tertentu dan menghasilkan informasi yang diinginkan pengguna. Sistem ini terdiri atas tiga bagian.</p>
+<h3>1. Perangkat keras (hardware)</h3><p>Komponen fisik pembentuk sistem komputer, terbagi lima jenis:</p>
+<ul><li><b>Masukan (input)</b>: memasukkan data; contoh keyboard, mouse, scanner, joystick.</li><li><b>Proses</b>: otak pengolahan data (menghitung, mengurutkan, mencari, menulis, membaca); contoh CPU, RAM, motherboard.</li><li><b>Keluaran (output)</b>: menampilkan hasil berupa teks, grafik, gambar, atau suara; contoh monitor, speaker, printer.</li><li><b>Penyimpanan (storage)</b>: menyimpan data, informasi, dan program; contoh harddisk, SSD, flash disk.</li><li><b>Tambahan (peripheral)</b>: perangkat yang dihubungkan untuk menambah kegunaan; contoh modem, TV tuner, LAN card.</li></ul>
+<h3>2. Perangkat lunak (software)</h3><p>Instruksi (program atau prosedur) yang mengolah data agar komputer dapat bekerja. Berdasarkan fungsinya:</p>
+<ul><li><b>Sistem operasi</b>: perangkat lunak pertama yang berjalan saat komputer menyala.</li><li><b>Aplikasi</b>: pengolah kata, pengolah angka, pengolah grafis (CorelDRAW, Photoshop), dan presentasi (PowerPoint, StarOffice Impress).</li><li><b>Pemrograman</b>: untuk mengembangkan, menguji, dan memelihara perangkat lunak. Terdiri atas <b>bahasa mesin</b> (generasi pertama, kode biner 0 dan 1), <b>bahasa Assembly</b> (mnemonic seperti SUB, MOV, CMP, JGE, LOOP), dan <b>bahasa tingkat tinggi</b> (lebih handal dan mudah menulis kodenya).</li><li><b>Utilitas</b>: membantu manajemen dan optimalisasi kinerja sistem komputer.</li></ul>
+<h3>3. Pengguna (brainware)</h3><p>Manusia yang memiliki kemampuan dan keahlian menjalankan serta mengatur kinerja software dan hardware.</p>
+<h3>Jenis komputer berdasarkan ukuran</h3><ul><li><b>Mikro</b>: paling kecil; ultrabook, konsol permainan, ponsel pintar, tablet.</li><li><b>Mainframe</b>: dirancang untuk dipakai bersamaan; perbankan dan telekomunikasi.</li><li><b>Mini</b>: ukuran sedang; administrasi perkantoran, serbaguna.</li><li><b>Personal (PC)</b>: untuk pemakaian individu.</li><li><b>Superkomputer</b>: memproses data sangat besar dengan cepat; menurut buku pertama dikembangkan tahun 1976.</li></ul>
+<h3>Interaksi manusia dan komputer (HCI)</h3><p>Mempelajari bagaimana orang berinteraksi dengan komputer. Jenisnya: <b>GUI</b> (antarmuka grafis: ikon, menu, dialog, tombol), <b>CLI</b> (perintah teks di terminal), melalui <b>suara</b> (audio), melalui <b>gambar</b> (video, memerlukan kamera), dan melalui <b>peranti masukan</b> (keyboard, joystick, mouse, touchpad, layar sentuh, keyboard virtual).</p>`;
+S0[8].t="Multitasking dan Cara Kerja Komputer";
+S0[8].m=`<h3>Multitasking</h3><p>Kemampuan menjalankan dua program atau lebih pada saat bersamaan, misalnya membuka pengolah kata sambil membuka browser. Jumlah program yang efektif bergantung pada tipe multitasking (preemptive atau cooperative), kecepatan CPU, memori, dan kapasitas harddisk.</p>
+<p>Sistem operasi melakukannya dengan algoritma penjadwalan <b>Round Robin (RR)</b>: setiap proses mendapat <b>slot waktu (time slice/kuantum)</b> yang sama dalam urutan melingkar, tanpa prioritas.</p>
+<div class="box">Contoh: kuantum 100 ms, job1 butuh 250 ms. Alokasi pertama 100 ms, kedua 100 ms, ketiga hanya 50 ms (selesai). Total waktu CPU job1 = 250 ms.</div>
+<ul><li><b>Algoritma pertama</b>: bila job selesai dalam kuantum, hapus dari antrean dan langsung ambil job berikutnya (CPU tidak pernah berhenti); di akhir kuantum, job yang belum selesai diantrekan kembali.</li><li><b>Algoritma kedua</b>: bila job selesai, tunggu sampai kuantum berakhir baru ambil job berikutnya.</li></ul>
+<h3>Cara kerja komputer</h3><p>Tiga tahap: <b>input</b> (menerima data dari perangkat masukan), <b>pemrosesan</b> (oleh CPU dan memori), dan <b>output</b> (layar, speaker, printer). Semua komponen terhubung oleh <b>BUS</b>.</p>
+<p>Penyimpanan: <b>primer</b> (memori utama, data sementara saat program berjalan) dan <b>sekunder</b> (permanen atau semi permanen pada media magnetik atau optik).</p>
+<h3>Cara CPU menjalankan instruksi</h3><ol><li>Instruksi atau data masuk lebih dulu ke RAM melalui input-storage.</li><li>Instruksi ditampung CU di program-storage; data di working-storage.</li><li>CU mengambil instruksi ke <i>instruction register</i>; alamat memorinya disimpan di <i>program counter</i>.</li><li>Data diambil CU ke <i>operand register</i>.</li><li>Untuk operasi aritmetika dan logika, <b>ALU</b> mengerjakannya, hasilnya ditampung di <i>accumulator</i>.</li><li>Hasil dikembalikan ke working-storage, lalu ke output-storage dan ditampilkan di output device.</li></ol>
+<p>CPU memiliki <b>clock</b> internal yang menghasilkan detak berkecepatan tetap untuk menyinkronkan operasi. Setiap CPU memahami himpunan instruksi tertentu (<b>instruction set</b>).</p>
+<h3>Siklus mesin</h3><p><b>Fetch</b> (CU mengambil instruksi), <b>decode</b> (CU menerjemahkan), ALU mengambil data ke register, lalu <b>execute</b> (ALU menjalankan). Contoh instruksi mesin sederhana untuk X + Y: SIMPAN data ke alamat memori, SALIN dari memori ke REG1 dan REG2, TAMBAH REG1 REG2, SALIN hasil ke memori, lalu PRINT. Jumlah register dan cara operasi merupakan spesifikasi mesin; mesin dengan satu register disebut mesin berakumulator.</p>`;
+S0[9].m=`<p>Jaringan komputer adalah kumpulan komputer dan perangkat komunikasi yang terhubung untuk berbagi sumber daya, informasi, dan layanan, serta memungkinkan komunikasi data jarak jauh secara efisien.</p>
+<h3>1. Jaringan lokal (LAN)</h3><p><i>Local Area Network</i> menghubungkan komputer dalam wilayah terbatas (rumah, kantor, sekolah, kampus) lewat kabel (wired), nirkabel (wireless), atau keduanya, dengan kecepatan tinggi sekitar 2 hingga 100 Mbps. Satu perangkat biasanya menjadi <b>server</b>, lainnya <b>client</b>. IP address di jaringan lokal disebut <b>IP private</b>.</p>
+<p>Keuntungan LAN: berbagi printer, file, dan koneksi internet; file di server memudahkan kolaborasi; kontrol keamanan, pemeliharaan, dan pemantauan lebih baik; backup data lebih mudah dan cepat; fleksibel dikembangkan; komunikasi lewat e-mail dan chat.</p>
+<h3>IP address</h3><p>Singkatan <i>Internet Protocol</i>: identitas setiap komputer sekaligus alamat lokasi jaringan. Terdiri atas 32 bit dalam empat bagian (masing-masing 8 bit) yang ditulis dalam desimal.</p>
+<div class="box"><code>192.168.10.1 = 11000000.10101000.00001010.00000001</code></div>
+<h3>2. Internet</h3><p><i>Inter-network</i>: sekumpulan jaringan komputer yang menghubungkan situs akademik, pemerintahan, bisnis, organisasi, dan individu. Layanannya antara lain e-mail, chatting, diskusi (usenet, mailing list), WWW, serta transfer file (Telnet, FTP). Jaringan internet beroperasi dengan protokol standar <b>TCP/IP</b>, yang dapat bekerja pada berbagai perangkat keras dan sistem operasi. Untuk mengakses internet diperlukan layanan <b>ISP</b> (<i>Internet Service Provider</i>), perusahaan penyedia jasa akses internet.</p>
+<h3>3. Konektivitas internet</h3><p><b>Jaringan berkabel (wired):</b></p>
+<ul><li><b>Dial-up</b>: lewat sambungan telepon rumah dan jalur PSTN ke ISP; perlu komputer, modem, dan saluran telepon; kecepatan maksimum 56 Kbps.</li><li><b>ADSL</b> (<i>Asymmetric Digital Subscriber Line</i>): data berkecepatan tinggi lewat kabel tembaga telepon; sifatnya asimetrik (kecepatan berbeda antarsisi); modem bekerja pada 34 kHz sampai 1104 kHz.</li><li><b>LAN</b>: satu komputer server terhubung ke ISP; komputer lain terkoneksi lewat LAN card dan kabel UTP.</li></ul>
+<p><b>Jaringan nirkabel (wireless):</b> memakai gelombang elektromagnetik.</p>
+<ul><li><b>GPRS</b>: pengiriman data lewat jaringan GSM; sekitar 56 Kbps hingga beberapa ratus Kbps.</li><li><b>Wi-Fi</b>: memakai gelombang radio pada frekuensi 2,4 GHz dan 5 GHz.</li><li><b>Satelit</b>: antena parabola, kecepatan akses tinggi tetapi mahal, terutama di Indonesia.</li></ul>`;
+S0[10].m=`<p>Komunikasi data adalah pengiriman dan penerimaan informasi antarperangkat lewat saluran komunikasi (kabel tembaga, serat optik, atau nirkabel) agar data tersampaikan cepat dan akurat. Pada ponsel, pemancar dan penerima sinyal adalah <b>BTS</b> (<i>Base Transceiver Station</i>).</p>
+<h3>Alur pengiriman SMS</h3><p>Pesan dikirim dari ponsel ke BTS, lalu BSC (<i>Base Station Controller</i>), lalu MSC (<i>Mobile Switching Center</i>), diteruskan ke SMSC (<i>Short Message Service Center</i>) untuk disimpan. SMSC memeriksa lewat HLR (<i>Home Location Register</i>) apakah ponsel tujuan aktif dan di mana posisinya. Jika tidak aktif, pesan disimpan sampai batas <i>validity period</i>; jika aktif, pesan dikirim lewat MSC, BSC, dan BTS penerima.</p>
+<h3>Koneksi jaringan pada ponsel</h3><ul><li><b>Kabel data</b>: jangkauan terbatas sesuai panjang kabel.</li><li><b>Bluetooth</b>: tanpa kabel, gelombang elektromagnetik pada frekuensi sekitar 2,4 sampai 2,45 GHz, jangkauan sangat dekat.</li><li><b>Wi-Fi</b>: bandwidth besar dan hemat baterai, tetapi jangkauan maksimum sekitar 100 meter.</li></ul>
+<h3>Jaringan internet seluler</h3><ul><li><b>GPRS</b>: 56 sampai 115 Kbps.</li><li><b>EDGE</b>: 120 sampai 384 Kbps.</li><li><b>3G</b>: 384 Kbps sampai 2 Mbps.</li><li><b>HSPA</b> (3,5G): 600 Kbps sampai 10 Mbps; HSDPA dikenal sebagai H+ di layar ponsel.</li><li><b>LTE (4G)</b>: hingga 100 Mbps.</li><li><b>5G</b>: hingga 10 Gbps (10 sampai 100 kali lebih cepat dari 4G).</li></ul>`;
+const X=["komputer dan elektronika","kabel dan satelit","Berpikir komputasional","Society 4.0","Teknologi informasi dan komunikasi","kimia","Praktik lintas bidang","Berkebinekaan global",
+"simulasi","abstraksi","pengenalan pola","membuat daftar bagian kecil",
+"berupa bilangan bulat","2","membandingkan elemen bersebelahan berulang kali","linear search",
+"Shortest Job First","peek","pop","tumpukan kardus",
+"prediksi","Google Translate","Google","mengikuti opini mayoritas",
+"nominal","kuesioner","angket","menjadi narasumber",
+".txt","spreadsheet",
+"monitor, keyboard, mouse","OS","browser","spreadsheet",
+"login, proses, logout","Monitor","Quick Sort","booting",
+"VPN","128","192.168.100","browser",
+"2G","10 GHz","tidak memerlukan sertifikat","memperbesar ukuran file",
+"Analisis data",
+"keuntungan dan tujuan pribadi","strategi","anggota bekerja sendiri tanpa koordinasi",
+"informasi","proses","hierarki","tidak membosankan","menentukan pesan utama","proses","huruf sekecil mungkin"];
+let qi=0;
+S0.forEach(s=>s.q=s.q.map(x=>{if(x[1].length>4)return x;const o=[...x[1],X[qi]],r=(qi*2+1)%5;qi++;return[x[0],o.slice(r).concat(o.slice(0,r)),(x[2]-r+5)%5]}));
+const BAB=[["Bab 1: Informatika di SMA",[0,11,12,13]],["Bab 2: Berpikir Komputasional",[1,2,3,4]],["Bab 3: Teknologi Informasi dan Komunikasi",[5,14,6]],["Bab 4: Sistem Komputer",[7,16,17,8]],["Bab 5: Jaringan Komputer dan Internet",[9,10,18]]];
+const DEL={1:[28,27,24,20,19,17,16,11],3:[21,22,23],4:[13]};
+const S=BAB.map(([t,ix],bi)=>({t,m:ix.map((i,k)=>`<h2 style="margin-top:22px;color:var(--ac)">${String.fromCharCode(65+k)}. ${S0[i].t}</h2>`+S0[i].m).join(""),q:ix.flatMap(i=>S0[i].q).filter((x,n)=>!(DEL[bi]||[]).includes(n+1))}));
+const KEY="emodul-info-x2",$=id=>document.getElementById(id);
+let U=null,cur=0,view="materi",sel={},res={},allScores=[];
+const KLS=[1,2,3,4,5,6].map(n=>"Kelas 10 Ruang "+n);
+
+function load(){try{const d=JSON.parse(localStorage.getItem(KEY));if(d&&d.U){U=d.U;res=d.res||{}}}catch(e){}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({U,res}))}catch(e){}}
+
+function fetchAllScores(){
+  if(!SCRIPT_URL) return;
+  fetch(SCRIPT_URL)
+    .then(res => res.json())
+    .then(data => { allScores = data; if(view==="rekap") render(); })
+    .catch(err => console.error("Gagal memuat rekap:", err));
+}
+
+function login(){$("app").innerHTML=`<div class="card"><h1>E-Modul Informatika</h1><p class="mu">Kelas X · Semester 1 · Materi dan latihan soal per bab</p>
+<label for="nm">Nama lengkap</label><input id="nm" placeholder="Tulis namamu" autocomplete="name">
+<label for="kl">Kelas</label><select id="kl"><option value="">Pilih kelas</option>${KLS.map(k=>`<option>${k}</option>`).join("")}</select>
+<p id="er" style="color:var(--no);min-height:1.4em"></p><button id="go">Mulai Belajar</button></div>`;
+$("go").onclick=()=>{const n=$("nm").value.trim(),k=$("kl").value;if(!n||!k){$("er").textContent="Isi nama dan pilih kelas dulu.";return}U={n,k};res={};save();cur=0;view="materi";fetchAllScores();render()}}
+
+function avg(){const v=Object.values(res).map(r=>r.s);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):0}
+
+function render(){if(!U)return login();
+let h=`<div class="hd"><div><h1>E-Modul Informatika</h1><span class="pill">${esc(U.n)} · ${U.k}</span></div><button class="g" id="out">Ganti siswa</button></div>
+<div class="nav">${S.map((s,i)=>`<button data-i="${i}" class="${i===cur&&view!=="rekap"?"on":""} ${res[i]?"dn":""}">${s.t}</button>`).join("")}<button data-i="r" class="${view==="rekap"?"on":""}">📊 Rekap Nilai Seluruh Siswa</button></div>`;
+if(view==="rekap")h+=rekap();else{const s=S[cur];
+h+=`<div class="tabs"><button class="${view==="materi"?"":"g"}" data-v="materi">📖 Materi</button><button class="${view==="latihan"?"":"g"}" data-v="latihan">✏️ Latihan Soal</button></div>
+<div class="card"><h2>${s.t}</h2>${view==="materi"?s.m+`<p><button id="tl">Lanjut ke latihan →</button></p>`:latihan(s)}</div>`}
+$("app").innerHTML=h;
+if($("gm"))gameInit(S[cur]);
+$("out").onclick=()=>{if(confirm("Keluar dan ganti siswa? Nilai di perangkat ini akan dihapus.")){try{localStorage.removeItem(KEY)}catch(e){}U=null;res={};sel={};login()}};
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>{const i=b.dataset.i;if(i==="r"){view="rekap";fetchAllScores();}else{cur=+i;view="materi"}render()});
+document.querySelectorAll("[data-v]").forEach(b=>b.onclick=()=>{view=b.dataset.v;render()});
+if($("tl"))$("tl").onclick=()=>{view="latihan";render();scrollTo(0,0)};
+document.querySelectorAll(".o").forEach(b=>b.onclick=()=>{if(sel[cur+"d"])return;(sel[cur]=sel[cur]||{})[b.dataset.q]=+b.dataset.o;render()});
+if($("sb"))$("sb").onclick=()=>{
+  const q=S[cur].q,a=sel[cur]||{};let ok=0;q.forEach((x,i)=>{if(a[i]===x[2])ok++});
+  const score = Math.round(ok/q.length*100);
+  res[cur]={s:score,b:ok,n:q.length};
+  sel[cur+"d"]=1;save();
+  
+  // Kirim nilai ke Google Sheets via Web App
+  if(SCRIPT_URL){
+    fetch(SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        nama: U.n,
+        kelas: U.k,
+        bab: S[cur].t,
+        nilai: score,
+        benar: ok,
+        total: q.length
+      })
+    }).catch(err => console.error("Gagal mengirim nilai:", err));
+  }
+  render();
+};
+if($("rt"))$("rt").onclick=()=>{delete sel[cur];delete sel[cur+"d"];render()};
+if($("nx"))$("nx").onclick=()=>{if(cur<S.length-1){cur++;view="materi"}else{view="rekap";fetchAllScores();}render();scrollTo(0,0)};
+if($("pr"))$("pr").onclick=()=>window.print()}
+
+function esc(t){return t.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+
+function latihan(s){const d=sel[cur+"d"];
+if(!d)return gameHTML(s);
+const a=sel[cur]||{},r=res[cur],n3=r.s>=90?3:r.s>=75?2:1;
+const miss=s.q.map((x,i)=>a[i]!==x[2]?`<li>${x[0]}<br><b style="color:var(--ok)">Jawaban benar: ${"ABCDE"[x[2]]}. ${x[1][x[2]]}</b></li>`:"").join("");
+return`<div class="box"><div style="font-size:1.8rem">${"⭐".repeat(n3)}${"☆".repeat(3-n3)}</div><div class="sc">${r.s}</div>Benar ${r.b} dari ${r.n} soal. ${r.s>=75?"Kamu berhasil melewati semua rintangan!":"Ayo coba lagi untuk hasil yang lebih baik."}</div>
+${miss?`<details style="margin:10px 0"><summary><b>Lihat soal yang masih salah</b></summary><ul>${miss}</ul></details>`:""}
+<button class="g" id="rt">Ulangi</button> <button id="nx">${cur<S.length-1?"Bab berikutnya →":"Lihat rekap nilai"}</button>`}
+
+/* ===== Latihan bergaya game (visual saja; logika nilai & kirim ke Spreadsheet tetap di handler #sb) ===== */
+const TH=[
+{n:"Lorong Obor",d:"Larilah di lorong adat dan hindari rintangan kayu!",sk:["#0a0705","#8a5a24"],w:"#6b4a3d",w2:"#4d342a",f:"#4a3f36",ln:"#2a211c",li:"#ffd15c",ob:"crate",oc:"#8a5a2b",sh:"#2f8f6b"},
+{n:"Hutan Rimba",d:"Terobos hutan rimba dan lompati batang kayu!",sk:["#04120a","#2f7a3b"],w:"#1f5a32",w2:"#143c22",f:"#5a4630",ln:"#33271a",li:"#c6ff7a",ob:"log",oc:"#7a4a22",sh:"#d9822b"},
+{n:"Jembatan Cahaya",d:"Lari di jembatan digital, hindari gerbang firewall!",sk:["#050a1e","#2a4fd0"],w:"#1c2f6b",w2:"#12204a",f:"#26304f",ln:"#0e1530",li:"#6fe3ff",ob:"bar",oc:"#ff4d6d",sh:"#2f8f6b"},
+{n:"Sirkuit Komputer",d:"Susuri papan sirkuit dan hindari chip yang rusak!",sk:["#02100c","#0f7a55"],w:"#0d4a3a",w2:"#082e24",f:"#123a2f",ln:"#082a21",li:"#7dffb0",ob:"chip",oc:"#1b1f24",sh:"#e0b43a"},
+{n:"Jaringan Galaksi",d:"Jelajahi jaringan antarbintang, hindari paku energi!",sk:["#0b0420","#6a2fc0"],w:"#3a1d6b",w2:"#241046",f:"#2a2145",ln:"#150d2b",li:"#ff9bf0",ob:"spikes",oc:"#ff5a8a",sh:"#3aa0d9"}];
+
+function gameHTML(s){const T=TH[cur%TH.length];
+return`<div class="gm" id="gm"><div class="gh"><span id="gq"></span><div class="gp"><i id="gpb"></i></div><span id="ghr"></span></div>
+<div class="gw"><canvas id="gcv" width="800" height="450"></canvas></div>
+<div class="gov" id="gov"><h3>${T.n}</h3><p>${T.d}<br><small>Saat menemui rintangan, jawab soal. Benar = melompat, salah = hati berkurang.</small></p><button id="gst">Mulai Lari!</button></div>
+<div class="gqp"><div id="gqt" class="gqt st"></div><div id="gop"></div><div class="gfb" id="gfb"></div></div>
+<div class="gfin" id="gfin" hidden><h3>🏁 Perjalanan selesai!</h3><p id="gfs"></p><button id="sb">Kirim jawaban</button></div></div>`}
+
+function gameInit(s){
+const T=TH[cur%TH.length],q=s.q,N=q.length,a=sel[cur]=sel[cur]||{},cv=$("gcv"),c=cv.getContext("2d");
+const W=800,H=450,CX=400,HY=150,YB=440,HW=440,WH=330,DS=.09,sc=d=>1/(1+d*8),fy=d=>HY+(YB-HY)*sc(d);
+let qi=q.findIndex((x,i)=>a[i]===undefined);if(qi<0)qi=N;
+let st=qi>=N?"done":"ready",pos=0,od=2,tS=0,jp=0,ph=0,fl=0,oa=1,last=performance.now(),lock=false;
+const nW=()=>q.reduce((n,x,i)=>n+(a[i]!==undefined&&a[i]!==x[2]?1:0),0);
+function ui(){const h=Math.max(0,3-nW());$("gq").textContent="Soal "+Math.min(qi+1,N)+"/"+N;$("gpb").style.width=Object.keys(a).length/N*100+"%";$("ghr").textContent="❤️".repeat(h)+"🖤".repeat(3-h)}
+function status(t){$("gqt").className="gqt st";$("gqt").textContent=t;$("gop").innerHTML="";$("gfb").textContent=""}
+function showQ(){lock=false;const x=q[qi];$("gqt").className="gqt";$("gqt").innerHTML=(qi+1)+". "+x[0];$("gfb").textContent="";
+$("gop").innerHTML=x[1].map((o,j)=>`<button class="gb" data-j="${j}">${"ABCDE"[j]}. ${o}</button>`).join("");
+document.querySelectorAll(".gb").forEach(b=>b.onclick=()=>answer(+b.dataset.j))}
+function answer(j){if(st!=="ask"||lock)return;lock=true;a[qi]=j;const x=q[qi],ok=j===x[2];
+document.querySelectorAll(".gb").forEach(b=>{const k=+b.dataset.j;if(k===x[2])b.classList.add("ok");else if(k===j)b.classList.add("bad")});
+const left=3-nW();$("gfb").textContent=ok?"✅ Benar! Ayo lompat!":(left>0?"💔 Salah! Hatimu berkurang.":"💔 Salah! Hati habis, tapi tetap semangat sampai soal selesai!");
+$("gfb").style.color=ok?"#4ade80":"#f87171";st=ok?"jump":"hit";tS=0;if(!ok)fl=1;ui()}
+function next(){qi++;ui();oa=1;fl=0;jp=0;if(qi>=N){st="done";od=2;status("Semua soal sudah dijawab.");$("gfs").textContent="Benar "+q.reduce((n,x,i)=>n+(a[i]===x[2]?1:0),0)+" dari "+N+" soal. Tekan kirim untuk melihat nilai.";$("gfin").hidden=false}else{st="run";od=1;status("🏃 Berlari… hindari rintangan!")}}
+$("gst").onclick=()=>{$("gov").hidden=true;st="run";od=1;status("🏃 Berlari… hindari rintangan!")};
+if(st==="done"){$("gov").hidden=true;status("Semua soal sudah dijawab.");$("gfs").textContent="Tekan kirim untuk melihat nilai.";$("gfin").hidden=false}
+else{status("Tekan “Mulai” untuk berlari.");if(qi>0)$("gst").textContent="Lanjutkan"}
+ui();
+function P(col,pts){c.fillStyle=col;c.beginPath();pts.forEach((p,i)=>i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]));c.closePath();c.fill()}
+function R(col,x,y,w,h){c.fillStyle=col;c.fillRect(x,y,w,h)}
+function obst(x,y,w,h){const o=T.oc;
+if(T.ob==="crate"){R(o,x-w/2,y-h,w,h);c.strokeStyle="#4a2e12";c.lineWidth=Math.max(2,w/14);c.strokeRect(x-w/2,y-h,w,h);c.beginPath();c.moveTo(x-w/2,y-h);c.lineTo(x+w/2,y);c.moveTo(x+w/2,y-h);c.lineTo(x-w/2,y);c.stroke()}
+else if(T.ob==="log"){R(o,x-w*.6,y-h*.7,w*1.2,h*.7);R("#a8703a",x-w*.6,y-h*.7,w*1.2,h*.16);[-.3,.1,.45].forEach(m=>R("#4a2e12",x+m*w,y-h*.7,w*.05,h*.7));c.fillStyle="#c28a52";c.beginPath();c.ellipse(x-w*.6,y-h*.35,w*.09,h*.35,0,0,7);c.fill()}
+else if(T.ob==="bar"){R("#222",x-w*.55,y-h*1.2,w*.09,h*1.2);R("#222",x+w*.46,y-h*1.2,w*.09,h*1.2);for(let i=0;i<8;i++)R(i%2?"#fff":o,x-w*.5+i*w/8,y-h*.95,w/8,h*.32);c.strokeStyle=T.li;c.lineWidth=2;c.strokeRect(x-w*.5,y-h*.95,w,h*.32)}
+else if(T.ob==="chip"){for(let i=0;i<4;i++){R("#b8b8b8",x-w*.68,y-h*.9+i*h*.22,w*.18,h*.1);R("#b8b8b8",x+w*.5,y-h*.9+i*h*.22,w*.18,h*.1)}R(o,x-w/2,y-h,w,h);c.strokeStyle=T.li;c.lineWidth=2;c.strokeRect(x-w*.3,y-h*.8,w*.6,h*.6);R("#ff4d4d",x-w*.07,y-h*.55,w*.14,h*.14)}
+else{for(let i=0;i<3;i++){const bx=x-w/2+i*w/3;P(o,[[bx,y],[bx+w/6,y-h*(i===1?1.1:.8)],[bx+w/3,y]])}}}
+function player(){const run=st==="run"||st==="jump"||st==="ready"||st==="done",a1=run?Math.sin(ph)*7:0,by=run?Math.abs(Math.sin(ph))*4:0,y=428-by-jp*125,x=CX;
+c.save();if(st==="hit")c.globalAlpha=Math.floor(tS*12)%2?.45:1;
+c.fillStyle="rgba(0,0,0,.35)";c.beginPath();c.ellipse(x,432,44-jp*14,9,0,0,7);c.fill();
+R("#3a2616",x-26,y-44,22,40+a1);R("#3a2616",x+4,y-44,22,40-a1);
+R("#e0b43a",x-36,y-56,72,12);R(T.sh,x-40,y-112,80,58);R("#277a5a",x-58,y-108+a1/2,18,46);R("#277a5a",x+40,y-108-a1/2,18,46);
+c.fillStyle="#1a110c";c.beginPath();c.arc(x,y-134,27,0,7);c.fill();R("#e0b43a",x-27,y-142,54,9);R("#c0392b",x+16,y-170,9,30);c.restore()}
+function draw(){c.save();c.clearRect(0,0,W,H);if(fl>0)c.translate((Math.random()-.5)*14*fl,(Math.random()-.5)*8*fl);
+R(T.sk[0],-20,-20,W+40,H+40);let g=c.createRadialGradient(CX,HY+30,10,CX,HY+30,300);g.addColorStop(0,T.sk[1]);g.addColorStop(1,"rgba(0,0,0,0)");c.fillStyle=g;c.fillRect(-20,-20,W+40,H+40);
+const yf=fy(1),hf=HW*sc(1),wf=WH*sc(1);
+g=c.createLinearGradient(0,yf-wf,0,yf);g.addColorStop(0,T.sk[0]);g.addColorStop(1,T.sk[1]);R(g,CX-hf,yf-wf,2*hf,wf);
+P(T.f,[[CX-HW,YB],[CX+HW,YB],[CX+hf,yf],[CX-hf,yf]]);
+[-1,1].forEach(m=>{P(T.w,[[CX+m*HW,YB],[CX+m*HW,YB-WH],[CX+m*hf,yf-wf],[CX+m*hf,yf]]);c.strokeStyle=T.w2;c.lineWidth=3;[.33,.66].forEach(f=>{c.beginPath();c.moveTo(CX+m*HW,YB-WH*f);c.lineTo(CX+m*hf,yf-wf*f);c.stroke()})});
+const k0=Math.ceil(pos);
+for(let k=k0+16;k>=k0;k--){const d=(k-pos)/16;if(d>1||d<0)continue;const s=sc(d),y=fy(d);
+c.strokeStyle=T.ln;c.lineWidth=1+3*s;c.beginPath();c.moveTo(CX-HW*s,y);c.lineTo(CX+HW*s,y);c.stroke();
+c.strokeStyle="rgba(255,255,255,.13)";c.lineWidth=1+2*s;[-.4,.4].forEach(m=>{c.beginPath();c.moveTo(CX+m*HW*s,y);c.lineTo(CX+m*HW*s*1.01,y-16*s);c.stroke()});
+if(k%4===0)[-1,1].forEach(m=>{const x=CX+m*HW*s;c.strokeStyle=T.ln;c.lineWidth=2+5*s;c.beginPath();c.moveTo(x,y);c.lineTo(x,y-WH*s);c.stroke();
+const ty=y-WH*s*.55,r=38*s;g=c.createRadialGradient(x,ty,0,x,ty,r);g.addColorStop(0,T.li+"aa");g.addColorStop(1,T.li+"00");c.fillStyle=g;c.beginPath();c.arc(x,ty,r,0,7);c.fill();c.fillStyle=T.li;c.beginPath();c.arc(x,ty,8*s+1,0,7);c.fill();R("#2a211c",x-2*s,ty+6*s,4*s,18*s)})}
+if(od<=1&&oa>0){const dd=Math.max(od,0),s=sc(dd),y=fy(dd)+Math.max(0,-od)*1200;c.save();c.globalAlpha=oa*Math.min(1,(1-od)*8);
+if(st==="hit"){const k=1+tS*.7,cy=y-WH*.2*s;c.translate(CX,cy);c.scale(k,k);c.translate(-CX,-cy)}
+obst(CX,y,HW*.42*s,WH*.42*s);c.restore()}
+player();
+if(fl>0){c.fillStyle="rgba(220,30,30,"+.38*fl+")";c.fillRect(-20,-20,W+40,H+40)}
+if(st==="done"){c.fillStyle="rgba(255,209,92,.14)";c.fillRect(-20,-20,W+40,H+40);c.fillStyle="#ffd15c";c.font="bold 44px system-ui,sans-serif";c.textAlign="center";c.fillText("SELESAI!",CX,70)}
+c.restore()}
+function fr(now){if(!cv.isConnected)return;const dt=Math.min(.05,(now-last)/1e3);last=now;let v=0;
+if(st==="ready"||st==="done")v=2.5;
+else if(st==="run"){v=9*Math.min(1,.25+(od-DS)*2.5);od-=v*dt/16;if(od<=DS){od=DS;st="ask";showQ()}}
+else if(st==="jump"){v=4;tS+=dt;od-=v*dt/16;jp=Math.sin(Math.PI*Math.min(1,tS/1));if(tS>=1)next()}
+else if(st==="hit"){tS+=dt;oa=Math.max(0,1-tS/.8);fl=Math.max(0,1-tS/.7);if(tS>=1.1)next()}
+pos+=v*dt;ph+=v*dt*1.1;draw();requestAnimationFrame(fr)}
+requestAnimationFrame(fr)}
+
+function rekap(){
+  const myRows=S.map((s,i)=>{const r=res[i];return`<tr><td>${s.t}</td><td>${r?r.b+"/"+r.n:"-"}</td><td><b>${r?r.s:"-"}</b></td><td>${r?(r.s>=75?"Tuntas":"Perlu remedial"):"Belum"}</td></tr>`}).join("");
+  const n=Object.keys(res).length;
+
+  // Tabel Seluruh Siswa dari Spreadsheet
+  const allRows = allScores.length ? allScores.map(row=>`<tr><td>${esc(row.nama)}</td><td>${esc(row.kelas)}</td><td>${esc(row.bab)}</td><td><b>${row.nilai}</b></td><td>${new Date(row.timestamp).toLocaleString("id-ID")}</td></tr>`).join("") : `<tr><td colspan="5" class="mu">Belum ada data siswa lain atau gagal memuat.</td></tr>`;
+
+  return`<div class="card">
+    <h2>Rekap Nilai Pribadi</h2><p><b>${esc(U.n)}</b> · ${U.k}</p>
+    <div class="tw"><table><tr><th>Bab</th><th>Benar</th><th>Nilai</th><th>Status</th></tr>${myRows}<tr><th>Rata-rata (${n}/${S.length} bab)</th><th></th><th>${n?avg():"-"}</th><th></th></tr></table></div>
+    
+    <h2 style="margin-top:28px">Rekap Nilai Seluruh Siswa (Database)</h2>
+    <p class="mu">Data nilai dari semua siswa yang telah mengumpulkan tugas/latihan:</p>
+    <div class="tw"><table><tr><th>Nama Siswa</th><th>Kelas</th><th>Bab</th><th>Nilai</th><th>Waktu Kirim</th></tr>${allRows}</table></div>
+    
+    <p class="mu" style="margin-top:14px">Tekan Cetak untuk menyimpan laporan Anda sebagai PDF.</p>
+    <button id="pr">🖨️ Cetak / Simpan PDF</button>
+  </div>`;
+}
+
+load();fetchAllScores();render();
+</script>
+</body>
+</html>
